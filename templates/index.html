@@ -1,19 +1,8 @@
-<!DOCTYPE HTML>
-<!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Koalgo</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+{% extends 'layouts/main.html' %}
+
+{% block content %}
+
+	
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -22,13 +11,13 @@
 					<section class="intro">
 						<header>
 							<h1>Koalgo</h1>
-							<p>Explore Writing & Literature with Code</p>
+							<p>Explore Literature with Code</p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="koalgo_1.jpg" alt="" /></span>
+							<span class="image fill" data-position="center"><img src="{{url_for('static', filename='koalgo_1.jpg')}}" alt="" /></span>
 						</div>
 					</section>
 
@@ -38,8 +27,8 @@
 							<h2>Simile Generator</h2>
 						</header>
 						<div class="content">
-							<p><strong>Make Your Own Similes!</strong> Use Python's import random module, similes from literature, and your own imagination to create similes.</p> 
-							<p><a href="Simile_Generator_1.html">Get Started</a></p>
+							<p><strong>Make Your Own Similes!</strong> Use Python's import random module and similes from literature to make a simile scrambler.</p> 
+							<p><a href="/simile">Get Started</a></p>
 							
 						</div>
 					</section>
@@ -51,7 +40,7 @@
 						</header>
 						<div class="content">
 							<p><strong>Have fun with opposites!</strong> Learn about the power of oxymorons, variables & values, and Python indexing to make your own oxymoron machine.</p>
-							<p><a href="Oxymoron_1.html">Get Started</a></p>
+							<p><a href="/oxymoron">Get Started</a></p>
 						</div>
 					</section>
 
@@ -62,7 +51,7 @@
 						</header>
 						<div class="content">
 							<p><strong>Make Shakespeare's superpower your own!</strong> Create your own rhyming couplets using Python's random module, user input, and concatenation.</p>
-							<p><a href="Couplet_1.html">Get Started</a></p>
+							<p><a href="/couplet">Get Started</a></p>
 
 				<!-- Section -->
 				<section>
@@ -71,12 +60,12 @@
 					</header>
 					<div class="content">
 						<p><strong>Bring language to life with metaphors!</strong> Make metaphors using variables, values, and concatenation.</p>
-						<p><a href="Metaphor_1.html">Get Started</a></p>
+						<p><a href="/metaphor">Get Started</a></p>
 
 				<!-- Section -->
 				<section>
 					<header>
-						<h2><a href="About.html">About Koalgo</a></h2>
+						<h2><a href="/about">About Koalgo</a></h2>
 				
 					<p>&copy; Koalgo. All rights reserved.<div class="content">.</p>
 					</header>
@@ -360,14 +349,10 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 				
 
 			</div>
+{% endblock %}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<!-- Scripts -->
+{% block scripts %}
+	{{ super() }}
+	<script src="{{url_for('static', filename='assets/js/main.js') }}"></script>
+{% endblock %}

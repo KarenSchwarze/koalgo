@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300i,400i,600i,700i|Raleway:600,800");
 
 /*
 	Paradigm Shift by HTML5 UP
@@ -165,7 +165,7 @@ input, select, textarea {
 		color: #000000;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 1rem;
-		font-weight: 300;
+		font-weight: normal;
 		letter-spacing: 0.0375em;
 		line-height: 2;
 	}
@@ -186,7 +186,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 600;
+		font-weight: 700;
 		color: #000000;
 	}
 
@@ -201,7 +201,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		color: #000000;
 		font-family: "Raleway", Helvetica, sans-serif;
-		font-weight: 600;
+		font-weight: 700;
 		letter-spacing: 0.175em;
 		line-height: 1.75;
 		margin: 0 0 1.5rem 0;
@@ -1867,7 +1867,7 @@ input, select, textarea {
 		display: inline-block;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.6rem;
-		font-weight: 600;
+		font-weight: 700;
 		height: 3rem;
 		letter-spacing: 0.175em;
 		line-height: 3rem;
@@ -2143,7 +2143,7 @@ input, select, textarea {
 		display: block;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.75rem;
-		font-weight: 600;
+		font-weight: 700;
 		letter-spacing: 0.175em;
 		line-height: 1.75;
 		margin: 0 0 1rem 0;
@@ -2600,7 +2600,7 @@ input, select, textarea {
 
 		dl dt {
 			display: block;
-			font-weight: 600;
+			font-weight: 700;
 			margin: 0 0 1rem 0;
 		}
 
@@ -2796,7 +2796,7 @@ input, select, textarea {
 		table th {
 			color: #000000;
 			font-size: 0.9rem;
-			font-weight: 600;
+			font-weight: 700;
 			padding: 0 0.75rem 0.75rem 0.75rem;
 			text-align: left;
 		}

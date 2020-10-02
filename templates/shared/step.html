@@ -1,0 +1,12 @@
+{% macro step(name, active=false, trinket="") -%}
+
+    {% set active_class = ' active' if active else '' %}
+
+    <li class="step{{ active_class }}" data-trinket="{{ trinket }}">
+        <h3>{{ name }}</h3>
+        <div class="step-description">
+            {{ caller() }}
+        </div>
+    </li>
+
+{%- endmacro %}

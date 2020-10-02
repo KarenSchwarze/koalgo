@@ -1,0 +1,23 @@
+#background {
+    background-color: #49fcd4;
+    padding: 1rem;
+}
+
+.container {
+    margin: auto;
+    width: 1200px;
+    max-width: 100%;
+}
+
+section {
+    margin-top: 1rem;
+}
+
+.content {
+    background-color: white;
+    padding: 2rem;
+}
+
+.hidden {
+    display: none;
+}

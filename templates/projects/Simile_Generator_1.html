@@ -1,0 +1,55 @@
+{% from 'shared/step.html' import step %}
+{% from 'shared/editor.html' import trinket %}
+
+{% extends 'layouts/lessons.html'%}
+
+{% block head %}
+	<title>Simile Generator</title>
+{% endblock %}
+
+{% block intro %}
+
+	<h1>Simile Generator</h1>
+	<p>A <strong>simile</strong> is a kind of figurative language. Figurative language creates pictures in the reader's mind and communicates an idea in a beautiful way.</p>
+	<p>A simile compares two things using "like" or "as". For example: "Tranquil as a forest" (Disney's <em>Mulan</em>), "He snuck away like a thief", "She's as brave as a lion", "He's happy like a kid at Christmas." </p>
+	<p>For this project, you will use similes from literature. But using code, you'll scramble those similes--with entertaining results!</p>
+	
+{% endblock %}	
+
+{% block steps %}
+	{% call step('Step 1', active=true, trinket='2877d865f6') %}
+	{% endcall %}
+
+	{% call step('Step 2', trinket='6b83e71dc1') %}
+	{% endcall %}
+
+	{% call step('Step 3', trinket='2877d865f6') %}
+	{% endcall %}
+
+	{% call step('Step 4', trinket='2877d865f6') %}
+	{% endcall %}
+
+	{% call step('Step 5', trinket='2877d865f6') %}
+	{% endcall %}
+
+	{% call step('Step 6', trinket='') %}
+	{% endcall %}
+{% endblock %}
+
+{% block editor %}
+	{{ trinket('2877d865f6', active=true) }}
+	{{ trinket('6b83e71dc1') }}
+{% endblock %}
+
+{% block resources %}
+	<h3>Teaching Ideas</h3>
+	<ul>
+		<li><strong>Key terms & concepts:</strong> Figurative language, simile, Python, value, variable, module, random module, string, function, print function, array, noun phrase</li>
+		<li>Discuss the difference between similes and metaphors.</li>
+		<li>Discuss why we use figurative language like similes and metaphors. How do these devices communicate an idea in a way that perhaps literal, non-figurative language doesn’t?</li>
+		<li>To explore similes further, have students find examples in popular culture, like song lyrics.</li>
+		<li>Instead of using the similes provided to complete the project, have students use examples from literature they are reading in class or their own original similes.</li>
+		<li>Generate simile ideas in small groups or as a class: Have each student come up with 5-10 nouns and write them on index cards. If in a small group, students show each other their cards and decide which could be paired as similes. Discuss the idea of abstraction, and how we’re not looking for literal similarity, i.e. “lemons are like oranges because they’re both citrus fruits”, but rather figurative similarity.</li>
+		<li>Have students write short responses or essays about the role of similes in a piece of literature. </li>
+	</ul>
+{% endblock resources %}

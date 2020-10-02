@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {% block head %}
+        <title>Koalgo</title>
+      {% endblock %}
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+      <link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+      <link rel="stylesheet" href="{{url_for('static', filename='assets/css/layout.css')}}" />
+      <link rel="stylesheet" href="{{url_for('static', filename='assets/css/theme.css')}}" />
+      <link rel="stylesheet" href="{{url_for('static', filename='assets/css/lessons.css')}}" />
+    </head>
+    <body id="background" class="is-preload">
+        
+        <!-- container -->
+        <div class="container">
+          <section>
+            <div class="intro content">
+              {% block intro %}
+              {% endblock %}
+            </div>
+          </section>
+
+          <!-- Steps and Editor -->
+          <section class="lesson-row">
+            <div class="content steps-container">
+            
+                <ol class="steps">
+                    {% block steps %}
+                    {% endblock steps %}
+                </ol>
+
+            </div>
+            <div class="content editor-container">
+              {% block editor %}
+              
+              {% endblock %}
+            </div>
+          </section>
+
+          <section id="solution">
+            <h4>View Solution</h4>
+            {% block solution %}
+            {% endblock %}
+          </section>
+
+          <section>
+            <div class="content">
+              {% block resources %}
+                Teacher Resources (project-specific)
+              {% endblock resources %}
+            </div>
+          </section>
+
+          <section>
+            <div class="content">
+              <h3>
+                Teaching Standards
+              </h3>
+              <section>
+                <p><a href = "http://www.corestandards.org/ELA-Literacy/"><strong>ELA Common Core Standards (U.S.)</strong></a>
+                <p><strong>Reading Standards for Literature, 6-12–Grades 9-10 Students, #4(Pg 38):</strong>
+                  <ul>
+                    <li>Determine the meaning of words and phrases as they are used in the text, including figurative and connotative meanings; analyze the cumulative impact of specific word choices on meaning and tone (e.g., how the language evokes a sense of time and place; how it sets a formal or informal tone).</li>
+                  </ul> 
+                <p><strong>Reading Standards for Literature 6-12–Grades 11-12 Students, #4(Pg 38):</strong>
+                  <ul>
+                    <li>Determine the meaning of words and phrases as they are used in the text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning and tone, including words with multiple meanings or language that is particularly fresh, engaging, or beautiful. (Include Shakespeare as well as other authors.)</li>
+                  </ul></p>
+                <p><strong>Reading Standards for Informational Text 6-12</strong></p>
+                <p><ul>
+                  <li>Grade 6 students #4 (Pg 39): Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings.</li>
+                  <li>Grade 7 students #4 (Pg 39): Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of a specific word choice on meaning and tone.</li>
+                  <li>Grade 8 students #4 (Pg 39): Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts.</li>
+                </ul>
+              </p>
+              </section>
+            </div>
+          </section>
+
+          <section>
+            <div class="content">
+              <h3>Python References</h3>
+              <section>
+                <p>For help with learning Python, check out these resources:</p>
+                <ul>
+                  <li><em>Think Java</em> and <em>Python for Everybody</em>, both available for free at <a href="https://trinket.io/" target="_blank">trinket.io</a></li>
+                  <li><em>Head First Learn to Code: A Learner’s Guide to Coding and Computational Thinking</em> by Eric Freeman</li>
+                  <li><em>Impractical Python Projects: Playful Programming Activities to Make You Smarter</em> by Lee Vaughan</li>
+                  <li>Mosh Hamedani’s YouTube tutorial <a href = "https://www.youtube.com/watch?v=kqtD5dpn9C8" target="_blank">“Python Tutorial - Python for Beginners [2020]”</a></li>
+                  <li><a href = "https://www.w3schools.com/python/" target="_blank">W3Schools.com</a> - Website with information about many programming languages, including Python</li>
+                </ul>
+              </section>
+
+            </div>
+          </section>
+
+          {% include 'shared/sitemap.html' %}
+
+        </div>
+      
+      
+      {% block scripts %}
+        <script src="{{url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+        <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+        <script src="{{url_for('static', filename='assets/js/browser.min.js') }}"></script>
+        <script src="{{url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+        <script src="{{url_for('static', filename='assets/js/util.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/lessons.js') }}"></script>
+      {% endblock %}
+    
+    </body>
+</html>
+
+<!--
+
+Dynamic Blocks
+
+- Lesson Intro
+- Coding Steps
+- Editor ID
+- Teacher Resources
+
+
+Static Content
+
+- Standards
+- List of references
+
+-->

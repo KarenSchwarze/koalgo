@@ -1,0 +1,13 @@
+{% macro trinket(id, active=false) %}
+    <iframe
+        id="trinket-{{ id }}"
+        class="{{ 'active' if active else '' }}"
+        src="https://trinket.io/embed/python/{{ id }}"
+        width="100%"
+        height="500"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        allowfullscreen
+    ></iframe>
+{% endmacro %}

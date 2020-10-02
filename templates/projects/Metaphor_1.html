@@ -1,0 +1,78 @@
+{% from 'shared/step.html' import step %}
+{% from 'shared/editor.html' import trinket %}
+
+{% extends 'layouts/lessons.html' %}
+
+{% block head %}
+  <title>Metaphor Maker</title> 
+{% endblock %}
+
+{% block intro %}   
+    
+        <h1>Metaphor Maker</h1>
+        <p>"All the world's a stage, and all the men and women in it merely players." -William Shakespeare</p>
+        <p>"Dying is a wild night and a new road." -Emily Dickinson</p>
+        <p>"But soft! What light through yonder window breaks? It is the East, and Juliet is the sun!" -William Shakespeare</p>
+        <p>All of the examples above are metaphors. A <strong>metaphor</strong> is a type of <strong>figurative language</strong> used for dramatic empahsis. There are different ways to structure a metaphor, but perhaps the simplest way is by using a conjugation of "to be" (am/are/is): "All the [world <em>is</em>] a stage...", "Dying <em>is</em> a wild night...", "Juliet <em>is</em> the sun!". When we use this metaphor structure, we generally follow this formula:</p>
+        <p>metaphor = first noun + "to be" conjugation" + second noun</p>
+        <p>We're going to use this formula to create a Metaphor Maker program using the metaphors above.</p>
+
+{% endblock %}
+
+{% block steps %}
+    {% call step('Step 1', active=true, trinket='dea8f359b9') %}
+      <p>Our metaphor formula is</p>
+
+      <p>metaphor = first noun + “to be” conjugation + second noun</p>
+      
+      <p>First, let’s figure out what our nouns are. Take a look at our metaphors again:</p>
+      
+      <p>
+      All the world [is] a stage...<br>
+      Juliet is the sun!<br>
+      Dying is a wild night...
+      </p>
+      
+      <p>
+        We also need to identify the “to be” conjugation in each metaphor. In all of the metaphors we’re using, the “to be” conjugation is “is”. Next we’ll learn about variables and values so we can add some to our program. 
+      </p>
+    
+    {% endcall %}
+    {% call step('Step 2', trinket='219b58ea07') %}
+        These are the directions for step 2.      
+    {% endcall %}
+
+    {% call step('Step 3', trinket='dea8f359b9') %}
+    These are the directions for step 2.
+    {% endcall %}
+
+    {% call step('Step 4') %}
+    These are the directions for step 2.
+    {% endcall %}
+    
+    {% call step('Step 5') %}
+    These are the directions for step 2.
+    {% endcall %}
+    
+    {% call step('Step 6') %}
+    These are the directions for step 2.
+    {% endcall %}
+{% endblock %}
+
+{% block editor %}
+  {{ trinket('dea8f359b9', active=true) }}
+  {{ trinket('219b58ea07') }}
+{% endblock %}
+
+{% block resources %}
+  <h3>Teaching Ideas</h3>
+  <ul>
+    <li><strong>Key terms & concepts:</strong> metaphor, figurative language, Python, value, variable, module, random module, string, function, print function, array, concatenate</li>
+    <li>Discuss the similarities and differences between similes and metaphors. </li>
+    <li>Discuss metaphor examples from literature you are reading in class. Have students use metaphors from their literature unit for this project instead of the metaphors given here.</li>
+    <li>Discuss why we use figurative language like similes and metaphors. How do these devices communicate an idea in a way that perhaps literal, non-figurative language doesn’t?</li>
+    <li>To explore metaphors further, have students find examples in popular culture, like song lyrics.</li>
+    <li>Have students come up with their own metaphors to use in this project. Students can generate ideas in small groups or as a class. If in small groups, have each student come up with 5-10 nouns and write them on index cards. Have the group look at all the words and see what pairings could be metaphors. Discuss the idea of abstraction; we’re looking for figurative similarity, not literal similarity. “A dog is an animal” is not a metaphor even though it’s two nouns joined by “is”. </li>
+    <li>Have students write critical analysis short responses or essays about the role of metaphors in a piece of literature.</li>
+  </ul>
+{% endblock resources %}

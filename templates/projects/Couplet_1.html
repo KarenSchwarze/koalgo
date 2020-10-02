@@ -1,0 +1,129 @@
+{% from 'shared/step.html' import step %}
+{% from 'shared/editor.html' import trinket %}
+
+{% extends 'layouts/lessons.html' %}
+
+{% block head %}
+  <title>Couplet Creator</title>
+{% endblock %}
+
+{% block intro %} 
+
+  <h1>Couplet Creator</h1>
+  <p>"The which if you with patient ears attend,<br>
+  What here shall miss, our toil shall strive to mend."</p>
+  <p>"To know our farther pleasure in this case,<br>
+  To old Freetown, our common judgement place."</p>
+  <p>"Love is a smoke made with the fume of sighs;<br>
+    Being purged, a fire sparkling in lovers' eyes..."</p>
+  <p>What do all of the above have in common? They’re couplets! A couplet is a literary device used in poetry. It consists of two lines, and the last words of the lines rhyme. Couplets can be found in poetry or, in a play, as part of a character’s speech. William Shakespeare is one of the most famous writers to use couplets. All of the examples above are from Shakespeare’s play <em>Romeo and Juliet.</em></p>
+  <p>We’re going to use a couplet from <em>Romeo and Juliet</em>, plus some other words, to make a Couplet Creator using Python, a programming language. The couplet we are using is at the end of the Prologue of <em>Romeo and Juliet.</em> Here is the couplet: “The which if you with patient ears attend / What here shall miss, our toil shall strive to mend.” Basically, in this line the Chorus (the person/group reciting the Prologue) is telling the play’s audience that if the audience is patient, the actors will do their best to tell the story.</p> 
+  <p>Here’s how the program works:</p>
+  <p>The program will ask the user for the first line of a couplet. The user will need to enter the first line of the couplet found at the end of the Prologue of <em>Romeo and Juliet</em>, minus the last word. At this point the user will type “The which if you with patient ears”. Next, after hitting the Enter key, the user will type the second line of the couplet, minus the last word. So, at this point the user will type “What here shall miss, our toil shall strive to”. Once the user hits Enter, the program will randomly assign a word from a list we gave it to the end of each line, giving the user a new version of the couplet from the Prologue.</p> 
+  <p>Let’s get started!</p>
+    
+
+{% endblock %}
+
+{% block steps %}
+    {% call step('Step 1', active=true, trinket='10427c2848') %}
+      <p>First, we need to tell our program that we want to use Python’s random module. This module  will allow the program to randomly choose from a list of words to add to the end of our couplet. By importing the random module at the beginning of the program, we allow the program to randomly assign a word to the end of each line in the couplet later in the program.</p> 
+      <p>On line 2 of the code editor on the right, give the program a direct command to import the random module.  Next we’ll learn about variables and values so we can add some to our program. </p>
+    {% endcall %}
+
+    {% call step('Step 2', trinket='6b83e71dc1') %}
+      <h4>Variables and Values</h4>
+      <p>In Python, we have variables and values. Think of a variable as a box, and a value as something that goes inside the box. Here is an example of a variable and its value:</p>
+      <p>animal = “cat”</p>
+      <p>In this case, animal is the variable, and “cat” is its value. In fact, it is a specific type of value--a string. A value that has letters or characters and no numbers is a string type value. We put strings inside quotation marks. When we write a variable, we are declaring the variable. </p>
+      <p>In this case, we can say that we are assigning the value of “cat” to the variable animal. The = is called the assignment operator. It’s not an “equals” sign in the sense that 2 = 2, but it does convey a relationship. We are basically saying that animal represents “cat”. That means that when we do something with animal, we are doing something with “cat”. </p>
+      <p>For example, look at this code:<br>
+        print(animal)<br>
+        </p>
+      <p>The print function tells the program to print, or display, something in the output area of our code editor. A function is an action that we can do in Python. Keeping in mind that animal represents “cat”, what do you think we’ll see if we print the value of animal?</p>
+      <p>Try it yourself: In the code editor on the right, declare a variable called animal. Then assign it a value, like “cat” (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the Run button at the top of the editor to see the results!</p>
+      <p>You can also have multiple words as part of a single value. For example:</p>
+      <p>favorite_song = “Somewhere Over the Rainbow”</p>
+      <p>Try typing the above code in the editor and then printing favorite_song.</p>
+      <p>Note that variable names are lowercase. Use underscores when you need to include multiple words, as in favorite_song, cat_name, and so on.</p>
+      <p>Sometimes we might want to have more than one value assigned to a variable. We might want to have a list of values, for instance. In Python, we can make a list, also called an array. For example:</p>
+      <p>animal = [“cat”, “dog”, “bird”, “fish”]</p>
+      <p>“Cat”, “dog”, “bird”, and “fish” are all values in the array. In this example, they are all single-word strings. But you can have multiple-word strings as values in an array, as well:</p>
+      <p>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</p>
+      <p>What do you think will be the result if you typed the above line of code in your code editor and then printed favorite_songs? Try it and see!</p>
+    {% endcall %}
+
+    {% call step('Step 3', trinket='10427c2848') %}
+      <p>Next, we are going to make two lists of words. The first list will be the possible end words for the first line of our couplet (including the original end word of the line), and the second list will be the possible end words for the second line of the couplet (including the original end word of the line). </p>
+      <p>All of the words will rhyme. We want to make sure that whatever words the program chooses, we still have a legitimate couplet whose last words rhyme. However, we don’t want the program to choose the same word to attach to the end of each line, which is why we need two separate lists. </p>
+      <p>Let’s call our first list line_1_rhyming_words. Type this variable name on line 4 of your code editor. Its values should be three words--”attend” plus two words that rhyme with “attend”. Like this:</p>
+      <p>line_1_rhyming_words = [“attend”, “ ”, “ ”]</p>
+      <p>Let’s do something similar on line 6. Here, declare a variable called line_2_rhyming_words and assign it a list of three values-- “mend” plus two words that rhyme with “mend”. Like this:</p>
+      <p>line_2_rhyming_words = [“mend”, “ ”, “ ”]</p>
+    {% endcall %}
+
+    {% call step('Step 4', trinket='10427c2848') %}
+        <p>Now we need to ask the user to tell us the first line of the couplet from the Prologue, minus the last word. We need to get some input from the user. To do this, we will create a new value:</p>
+        <p>input(“Please type the first line of the couplet from the Prologue in Romeo and Juliet, minus the last word.  ”)</p>
+        <p>and assign it to a variable:<br>
+          line_1 = 
+          </p>
+        <p>Notice that we have put an extra space after the period before the end quotation mark. That way when the user types their response, there will be a space between the prompt and the response.</p>
+        <p>Now we need to do the same thing to get the second line of the couplet minus the last word. On line 10, declare a variable called line_2 and assign it the value of the user input when asked to type the second line of the couplet minus the last word. </p>
+        <p>Now we have two new variables, line_1 and line_2. The value of line_1 is the input we asked the user to type: The first line of the couplet from the Prologue, minus the last word. The value of line_2 is the input we asked the user to type: The second line of the couplet from the Prologue, minus the last word. </p>
+    {% endcall %}
+
+    {% call step('Step 5', trinket='10427c2848') %}
+          <p>Let’s recap what we’ve done so far: We’ve imported Python’s random module to allow our program to randomly choose values from our lists of rhyming words to create a new version of the couplet. We’ve created two variables, line_1_rhyming_words and line_2_rhyming_words, each containing a list of words, all of which rhyme. </p>
+          <p>Next, we created two more variables, line_1 and line_2, and we are asking the user to provide the lines (all but the last word in each line) from the Prologue couplet as the values for these variables.</p>
+          <p>We have all of the pieces we need for our couplet. Now we just have to somehow get two words and add them to our user input lines so that we have two complete lines in our couplet.</p>
+          <p>This is where the random module comes into play. This module has a function called .choice() that we can use. A function is a type of action. We can type random.choice(), put the name of a list in the parentheses, and then an item will randomly be chosen from that list.</p>
+          <p>Let’s see how this works. On lines 12 and 13 of your code editor, type:</p>
+          <p>word = random.choice(line_1_rhyming_words)<br>
+            print(word)
+            </p>
+          <p>In the output area of the code editor, you should see one of the words from line_1_rhyming_words. The program randomly chose a word from that list, assigned it as the value of the variable word, and displayed it!</p>
+          <p>Delete the code on lines 12 and 13. Now that you’ve seen how random.choice() works, let’s use it in our Couplet Creator!</p>
+          <p>We need to create two more variables. These variables are going to contain the new versions of our couplet lines. We will call these variables line_1_new and line_2_new. Declare these variables on lines 12 and 13. We’ll add their values soon.</p>
+          <p>We know that we want to get the new version of each line of our couplet, but first we need to teach the program what the formula is for each line. We will use concatenation to add together all of the pieces of each line of the couplet. Concatenation means “adding together”. We do this by using the + symbol, just as you do when adding in math class. </p>
+          <p>Before we write the code, let’s look at it as a formula:</p>
+          <p>New Line 1 of couplet = the user input we got for line 1 + a random word from our first list of words<br>
+            New Line 2 of couplet = the user input we got for line 2 + a random word from our second list of words
+            </p>
+          <p>We have variables and values to represent all of these pieces of our formula--let’s put them together! Add this code to line 12, after the = symbol:</p>
+          <p>line_1 + “  ” + random.choice(line_1_rhyming_words)</p>
+          <p>On line 13, we want to do the same thing, except we want to concatenate line_2, a space, and a random word from line_2_rhyming_words. Type the code to do this. </p>
+          <p>Now the new version of the first line of our couplet will “equal” the user input (represented by line_1) “plus” a random word from the first list of rhyming words. The new version of the second line of our couplet will “equal” the user input (represented by line_2)  “plus” a random word from the second list of rhyming words. </p>
+          <p>By adding a “  ”, we add an extra space between the user input and the randomly chosen word. That way the user input and the word are not smashed up against each other.</p>
+    {% endcall %}
+
+    {% call step('Step 6', trinket='10427c2848') %}
+          <p>Now that we have taught our program the formula for the lines of our couplet, it’s time to tell the program to “print”, or display, both lines so that we have a complete, new couplet.</p>
+          <p>On lines 15 and 16, type:<br>
+            print(line_1_new)<br>
+            print(line_2_new)
+            </p>
+          <p>Then hit Run to see the program in action!</p>
+          <p>Try running the program several times to see different couplets. You may even end up seeing the original couplet from the Prologue--it all depends on which words the program randomly chooses. </p>
+     {% endcall %}
+{% endblock %}
+
+{% block solution %}
+    {{ trinket('13eaeedcc7') }}
+{% endblock %}
+
+{% block editor %}
+    {{ trinket('10427c2848', active=true)}}
+    {{ trinket('6b83e71dc1') }}
+{% endblock %}
+
+{% block resources %}
+    <h3>Teaching Ideas</h3>
+    <ul>
+      <li><strong>Key terms & concepts:</strong> couplet, Python, module, random module, value, variable, string, function, print function, array, input, function, concatenation</li>
+      <li>Do this project while studying sonnets, couplets, poetry, or Shakespeare.</li>
+      <li>Have students find other couplets to use in their project other than the one in the Prologue. </li>
+      <li>Have students write original sonnets, including couplets, and then do this coding project after writing their sonnets. </li>
+      <li>Have students write critical analysis short responses or essays about the role of a couplet in a specific sonnet from literature.</li>
+    </ul>
+{% endblock resources %}
