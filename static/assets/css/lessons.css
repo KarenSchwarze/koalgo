@@ -73,6 +73,7 @@ ol.steps {
     flex: 1 1 auto;
     overflow-y: auto;
     padding: 1rem;
+    background: linear-gradient(#0002, transparent 5px, transparent calc(100% - 5px), #0002);
 }
 
 /* p is child of .step-description */
@@ -102,7 +103,6 @@ ol.steps {
 
 .step.active .step-description {
     display: block;
-    box-shadow: inset 0 0 10px -2px #0005;
 }
 
 .editor-container {

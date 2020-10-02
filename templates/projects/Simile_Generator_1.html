@@ -18,12 +18,46 @@
 
 {% block steps %}
 	{% call step('Step 1', active=true, trinket='2877d865f6') %}
+	<p>Here are a few similes:<br>
+		“The horse was strutting like a prizefighter.” - Laura Hillenbrand<br>
+		“They watch the miners spilling out of warehouses with their lunch pails toward the mouth of the elevator like insects toward a lighted trap.” - Anthony Doerr<br>
+		“Her breath is like frozen air.” - Jessica Rhoades
+	</p>
+	<p>We are going to use Python to scramble these similes!</p>
+	<p>The code editor on the right is where you’ll write your code for this project.</p>
+	<p>To make our program, we will first need to split up our similes. Then we will tell the program to randomly assign two halves of a simile together to make a whole simile.</p>
+	<p>Because we want the program to have the ability to randomly assign one half of a simile to another half, we need to tell our program to use Python’s random module. This module, or set of built-in Python files, allows the program to do things randomly.</p>
+	<p>To tell our program to use Python’s random module, we need to import it. Try doing this yourself: On line 2 of the code editor on the right, write a direct command to tell your program to import the random module. Next we’ll learn about variables and values so we can add some to our program. </p>
 	{% endcall %}
 
 	{% call step('Step 2', trinket='6b83e71dc1') %}
+	<h4>Variables and Values</h4>
+  	<p>In Python, we have variables and values. Think of a variable as a box, and a value as something that goes inside the box. Here is an example of a variable and its value:</p>
+  	<p>animal = “cat”</p>
+  	<p>In this case, animal is the variable, and “cat” is its value. In fact, it is a specific type of value--a string. A value that has letters or characters and no numbers is a string type value. We put strings inside quotation marks. When we write a variable, we are declaring the variable. </p>
+  	<p>In this case, we can say that we are assigning the value of “cat” to the variable animal. The = is called the assignment operator. It’s not an “equals” sign in the sense that 2 = 2, but it does convey a relationship. We are basically saying that animal represents “cat”. That means that when we do something with animal, we are doing something with “cat”. </p>
+  	<p>For example, look at this code:<br>
+    print(animal)<br>
+    </p>
+ 	<p>The print function tells the program to print, or display, something in the output area of our code editor. A function is an action that we can do in Python. Keeping in mind that animal represents “cat”, what do you think we’ll see if we print the value of animal?</p>
+  	<p>Try it yourself: In the code editor on the right, declare a variable called animal. Then assign it a value, like “cat” (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the Run button at the top of the editor to see the results!</p>
+  	<p>You can also have multiple words as part of a single value. For example:</p>
+  	<p>favorite_song = “Somewhere Over the Rainbow”</p>
+  	<p>Try typing the above code in the editor and then printing favorite_song.</p>
+  	<p>Note that variable names are lowercase. Use underscores when you need to include multiple words, as in favorite_song, cat_name, and so on.</p>
+  	<p>Sometimes we might want to have more than one value assigned to a variable. We might want to have a list of values, for instance. In Python, we can make a list, also called an array. For example:</p>
+  	<p>animal = [“cat”, “dog”, “bird”, “fish”]</p>
+  	<p>“Cat”, “dog”, “bird”, and “fish” are all values in the array. In this example, they are all single-word strings. But you can have multiple-word strings as values in an array, as well:</p>
+  	<p>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</p>
+  	<p>What do you think will be the result if you typed the above line of code in your code editor and then printed favorite_songs? Try it and see!</p>
 	{% endcall %}
 
 	{% call step('Step 3', trinket='2877d865f6') %}
+	<p>Now that you know about variables and values, let’s create some for our simile generator. A simile is a comparison of two nouns. To make our simile generator, we need to have two lists of nouns that we can compare.</p>
+	<p>First, let’s create two new variables. Each one is the name of a list. If we want to have two lists, list 1 and list 2, how would we format those as variable names? Type the variable names on lines 4 and 5 of your code editor. </p>
+	<p></p>
+	<p></p>
+	<p></p>
 	{% endcall %}
 
 	{% call step('Step 4', trinket='2877d865f6') %}
