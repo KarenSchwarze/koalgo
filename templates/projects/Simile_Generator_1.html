@@ -51,6 +51,47 @@
   	<p>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</p>
   	<p>What do you think will be the result if you typed the above line of code in your code editor and then printed favorite_songs? Try it and see!</p>
 	{% endcall %}
+	{% call step('Step 3', trinket='2877d865f6') %}
+	<p>Now that you know about variables and values, let’s create some for our simile generator. A simile is a comparison of two nouns. To make our simile generator, we need to have two lists of nouns that we can compare.</p>
+	<p>First, let’s create two new variables. Each one is the name of a list. If we want to have two lists, list 1 and list 2, how would we format those as variable names? Type the variable names on lines 4 and 5 of your code editor. </p>
+	<p>Now we need some values to assign to our variables. Let’s take a look at our similes:</p>
+	<p>
+		The horse was strutting like a prizefighter.<br>
+		The miners spilling out of warehouses with their lunch pails toward the mouth of the elevator like insects toward a lighted trap.<br>
+		Her breath is like frozen air.
+		</p>
+	<p>We need to split each of these similes so that the first noun phrase of each simile is in the first list, and the second noun phrase of each simile is in the second list. A noun phrase contains a noun (person, place, thing) and words that accompany it, such as articles (a/an/the), adjectives, or verbs.</p>
+	<p>Look at the similes again:</p>
+	<p>The horse was strutting like a prizefighter.<br>
+		The miners spilling out of warehouses with their lunch pails toward the mouth of the elevator like insects toward a lighted trap.<br>
+		Her breath is like frozen air.</p>
+	<p>
+		Let’s take the noun phrases highlighted in yellow and assign them as values to our first variable. Here’s a hint as to how to format these:
+		</p>
+	<p>list_1 = [“ ” , “ ”, “ ” ]</p>
+	<p>We also need to assign values to our second variable. Take the noun phrases highlighted in blue and assign them as list items to the second variable. Use the same formatting as you did for list_1.</p>
+	{% endcall %}
+
+	{% call step('Step 4', trinket='2877d865f6') %}
+	<p>Now that we have our two lists, with each list containing a part of a simile, we need to tell our program to randomly pull an item from each list. We do this by using Python’s random module.</p>
+	<p>On lines 7 and 8, we are going to make two new variables. Each variable is going to contain just one item, or value. Type the following code on lines 7 and 8:</p>
+	<p>part_1 = random.choice(list_1)<br>
+	   part_2 = random.choice(list_2)
+	</p>
+	<p>The random.choice you see above is randomly pulling an item from the list in parentheses next to it and assigning that value to the new variable. So, the variable part_1 will have a value of an item from list_1 and the variable part_2 will have a value of something pulled from list_2. </p>
+	<p>This is where the “scrambling” happens--we won’t know what items the code assigned to part_1 and part_2 until the program runs!</p>
+	{% endcall %}
+
+	{% call step('Step 5', trinket='2877d865f6') %}
+	<p>A basic simile follows this formula:</p>
+	<p>simile = noun phrase 1 + “like” + noun phrase 2</p>
+	<p>We want to teach this formula to our program. How might we do that, using what we know about variables and values? On line 10  try turning this formula into code. </p>
+	<p>Then, on line 11, tell the program to print your simile. Then hit Run and see what happens!</p>
+	{% endcall %}
+
+	{% call step('Step 6', trinket='2877d865f6') %}
+	<p>Now your simile generator is all set up and ready to use. All you have to do is hit Run as many times as you want to see different similes. You may even end up seeing the original, unscrambled similes! It all depends on what values the program chooses to randomly pull from list_1 and list_2. </p>
+	{% endcall %}
 {% endblock %}
 
 {% block editor %}
