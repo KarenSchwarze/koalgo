@@ -20,12 +20,14 @@
 {% endblock %}
 
 {% block steps %}
-    {% call step('Step 1', active=true, trinket='dea8f359b9') %}
+    {% call step('Step 1', active=true, trinket='44e5e43d9f') %}
       <p>Our metaphor formula is</p>
 
-      <p>metaphor = first noun + “to be” conjugation + second noun</p>
+      <p>metaphor = first noun phrase + “to be” conjugation + second noun phrase</p>
+
+      <p>A <strong>noun phrase</strong> contains a noun and any descriptive words that accompany it, like articles, adjectives, and other parts of speech.</p>
       
-      <p>First, let’s figure out what our nouns are. Take a look at our metaphors again:</p>
+      <p>Let’s figure out what our noun phrases are. Take a look at our metaphors again:</p>
       
       <p>
       All the world [is] a stage...<br>
@@ -33,35 +35,72 @@
       Dying is a wild night...
       </p>
       
-      <p>
-        We also need to identify the “to be” conjugation in each metaphor. In all of the metaphors we’re using, the “to be” conjugation is “is”. Next we’ll learn about variables and values so we can add some to our program. 
+      <p>We also need to identify the “to be” conjugation in each metaphor. In all of the metaphors we’re using, the “to be” conjugation is “is”.</p> 
+      <p>Next we’ll learn about variables and values!</p> 
+      
+    
+    {% endcall %}
+    {% call step('Step 2', trinket='7b478b56fd') %}
+      <h4>Variables and Values</h4>
+  	  <p>In Python, we have variables and values. Think of a <strong>variable</strong> as a box, and a <strong>value</strong> as something that goes inside the box. Here is an example of a variable and its value:</p>
+  	  <p><code>animal = “cat”</code></p>
+  	  <p>In this case, <code>animal</code> is the variable, and <code>“cat”</code> is its value. In fact, it is a specific type of value--a <strong>string</strong>. A value that has letters or characters and no numbers is a string type value. We put strings inside quotation marks. When we write a variable, we are <strong>declaring</strong> the variable. </p>
+  	  <p>In this case, we can say that we are <strong>assigning</strong> the value of <code>“cat”</code> to the variable <strong>animal</strong>. The <code>=</code> is called the <strong>assignment operator</strong>. It’s not an “equals” sign in the sense that 2 = 2, but it does convey a relationship. We are basically saying that <code>animal</code> represents <code>“cat”</code>. That means that when we do something with <code>animal</code>, we are doing something with <code>“cat”</code>. </p>
+  	  <p>For example, look at this code:<br>
+      <code>print(animal)</code><br>
       </p>
-    
-    {% endcall %}
-    {% call step('Step 2', trinket='219b58ea07') %}
-        These are the directions for step 2.      
+ 	    <p>The <code>print</code> function tells the program to print, or display, something in the output area of our code editor. A <strong>function</strong> is an action that we can do in Python. Keeping in mind that <code>animal</code> represents <code>“cat”</code>, what do you think we’ll see if we print the value of <code>animal?</code></p>
+  	  <p>Try it yourself: In the code editor on the right, declare a variable called <code>animal</code>. Then assign it a value, like <code>“cat”</code> (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the large gray triangle button at the top of the editor to run your program and see the results!</p>
+  	  <p>You can also have multiple words as part of a single value. For example:</p>
+  	  <p><code>favorite_song = “Somewhere Over the Rainbow”</code></p>
+  	  <p>Try typing the above code in the editor and then printing <code>favorite_song</code>.</p>
+  	  <p>Note that variable names are lowercase. Use underscores when you need to include multiple words, as in <code>favorite_song</code>, <code>cat_name</code>, and so on.</p>
+  	  <p>Sometimes we might want to have more than one value assigned to a variable. We might want to have a list of values, for instance. In Python, we can make a list, also called an <strong>array</strong>. For example:</p>
+  	  <p><code>animal = [“cat”, “dog”, “bird”, “fish”]</code></p>
+  	  <p><code>“Cat”</code>, <code>“dog”</code>, <code>“bird”</code>, and <code>“fish”</code> are all values in the array. In this example, they are all single-word strings. But you can have multiple-word strings as values in an array, as well:</p>
+  	  <p><code>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</code></p>
+  	  <p>What do you think would be the result if you typed the above line of code in your code editor and then printed <code>favorite_songs</code>? Try it and see!</p>     
     {% endcall %}
 
-    {% call step('Step 3', trinket='dea8f359b9') %}
-    These are the directions for step 2.
+    {% call step('Step 3', trinket='44e5e43d9f') %}
+      <p>Now that we know how our metaphors fit the metaphor formula, we need to turn each part into code. </p>
+      <p>First, we’ll split our noun phrases into variables and values. For each metaphor, we need to have two variables--noun phrase 1 and noun phrase 2. Because we have 3 metaphors, we’re going to make, or <strong>declare</strong>, a total of 6 variables with 6 accompanying values: <code>noun_phrase_1a</code> (“All the world”) and <code>noun_phrase_1b</code> (“stage”); <code>noun_phrase_2a</code> (“Juliet”) and <code>noun_phrase_2b</code> (“the sun”), and <code>noun_phrase_3a</code> (“Dying”) and <code>noun_phrase_3b</code> (“wild night”).</p>
+      <p>On lines 2-7, type this code: <br>
+        <code>noun_phrase_1a = “All the world”</code><br>
+        <code>noun_phrase_1b = “a stage”</code><br>
+        <code>noun_phrase_2a = “Juliet”</code><br>
+        <code>noun_phrase_2b = “the sun”</code><br>
+        <code>noun_phrase_3a = “Dying”</code><br>
+        <code>noun_phrase_3b = “a wild night”</code><br>
+        </p>
     {% endcall %}
 
-    {% call step('Step 4') %}
-    These are the directions for step 2.
+    {% call step('Step 4', trinket='44e5e43d9f') %}
+      <p>Let’s create three more variables. On lines 9-11, write this code:</p>
+      <p><code>metaphor_1 = noun_phrase_1a + “  is  ” + noun_phrase_1b</code><br>
+        <code>metaphor_2 = noun__phrase_2a + “  is  ” + noun_phrase_2b</code><br>
+        <code>metaphor_3 = noun_phrase_3a + “  is  ” + noun_phrase_3b</code><br>
+        </p>
+      <p>In the code above, we are joining together both noun phrases in each metaphor with “is”. We have a space on either side of “is” within the quotation marks so that we have enough space in each metaphor. We used the “+” to add together, or <strong>concatenate</strong>, the parts of our metaphors. </p>
     {% endcall %}
     
-    {% call step('Step 5') %}
-    These are the directions for step 2.
-    {% endcall %}
-    
-    {% call step('Step 6') %}
-    These are the directions for step 2.
+    {% call step('Step 5', trinket='44e5e43d9f') %}
+      <p>To see the results of our Metaphor Maker, we need to use the <code>print</code> function. A <strong>function</strong> is an action we can do in Python. This function will “print” or display the output of the program. On lines 13-15, type this code:</p>
+      <p><code>print(metaphor_1)</code><br>
+        <code>print(metaphor_2)</code><br>
+        <code>print(metaphor_3)</code><br>
+        </p>
+      <p>Then run your program to see the results!</p>
     {% endcall %}
 {% endblock %}
 
+{% block solution %}
+	{{ trinket('6b663d013c') }}
+{% endblock %}
+
 {% block editor %}
-  {{ trinket('dea8f359b9', active=true) }}
-  {{ trinket('219b58ea07') }}
+  {{ trinket('44e5e43d9f', active=true) }}
+  {{ trinket('7b478b56fd') }}
 {% endblock %}
 
 {% block resources %}
@@ -69,6 +108,7 @@
   <ul>
     <li><strong>Key terms & concepts:</strong> metaphor, figurative language, Python, value, variable, module, random module, string, function, print function, array, concatenate</li>
     <li>Discuss the similarities and differences between similes and metaphors. </li>
+    <li>Discuss different metaphor structures and how in this project we are just using one structure: noun phrase + is + noun phrase.</li>
     <li>Discuss metaphor examples from literature you are reading in class. Have students use metaphors from their literature unit for this project instead of the metaphors given here.</li>
     <li>Discuss why we use figurative language like similes and metaphors. How do these devices communicate an idea in a way that perhaps literal, non-figurative language doesn’t?</li>
     <li>To explore metaphors further, have students find examples in popular culture, like song lyrics.</li>
