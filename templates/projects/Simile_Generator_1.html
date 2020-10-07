@@ -25,12 +25,13 @@
 	</p>
 	<p>We are going to use Python, a programming language, to scramble these similes!</p>
 	<p>The code editor on the right is where you’ll write your code for this project.</p>
-	<p>To make our program, we will first need to split up our similes. Then we will tell the program to randomly assign two halves of a simile together to make a whole simile.</p>
+	<p>To make our program, we will first need to split up our similes. Then we will tell the program to randomly combine together two halves of a simile to make a whole simile.</p>
 	<p>Because we want the program to have the ability to randomly assign one half of a simile to another half, we need to tell our program to use Python’s <code>random</code> module. This module, or set of built-in Python files, allows the program to do things randomly.</p>
-	<p>To tell our program to use Python’s <code>random</code> module, we need to import it. Try doing this yourself: On line 2 of the code editor on the right, write a direct command to tell your program to <em>import</em> the <code>random</code> module. Next we’ll learn about variables and values so we can add some to our program. </p>
+	<p>To tell our program to use Python’s <code>random</code> module, we need to import it. Try doing this yourself: On line 2 of the code editor on the right, write a direct command to tell your program to <em>import</em> the <code>random</code> module. </p>
+	<p>Next up we’ll learn about variables and values. </p>
 	{% endcall %}
 
-	{% call step('Step 2', trinket='6b83e71dc1') %}
+	{% call step('Step 2', trinket='7b478b56fd') %}
 	<h4>Variables and Values</h4>
   	<p>In Python, we have variables and values. Think of a <strong>variable</strong> as a box, and a <strong>value</strong> as something that goes inside the box. Here is an example of a variable and its value:</p>
   	<p><code>animal = “cat”</code></p>
@@ -39,8 +40,8 @@
   	<p>For example, look at this code:<br>
     <code>print(animal)</code><br>
     </p>
- 	<p>The <code>print</code> function tells the program to print, or display, something in the output area of our code editor. A <strong>function</strong> is an action that we can do in Python. Keeping in mind that <code>animal</code> represents “cat”, what do you think we’ll see if we print the value of <code>animal?</code></p>
-  	<p>Try it yourself: In the code editor on the right, declare a variable called <code>animal</code>. Then assign it a value, like <code>“cat”</code> (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the <strong>Run</strong> button at the top of the editor to see the results!</p>
+ 	<p>The <code>print</code> function tells the program to print, or display, something in the output area of our code editor. A <strong>function</strong> is an action that we can do in Python. Keeping in mind that <code>animal</code> represents <code>“cat”</code>, what do you think we’ll see if we print the value of <code>animal?</code></p>
+  	<p>Try it yourself: In the code editor on the right, declare a variable called <code>animal</code>. Then assign it a value, like <code>“cat”</code> (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the large gray triangle button at the top of the editor to run your program and see the results!</p>
   	<p>You can also have multiple words as part of a single value. For example:</p>
   	<p><code>favorite_song = “Somewhere Over the Rainbow”</code></p>
   	<p>Try typing the above code in the editor and then printing <code>favorite_song</code>.</p>
@@ -49,7 +50,7 @@
   	<p><code>animal = [“cat”, “dog”, “bird”, “fish”]</code></p>
   	<p><code>“Cat”</code>, <code>“dog”</code>, <code>“bird”</code>, and <code>“fish”</code> are all values in the array. In this example, they are all single-word strings. But you can have multiple-word strings as values in an array, as well:</p>
   	<p><code>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</code></p>
-  	<p>What do you think will be the result if you typed the above line of code in your code editor and then printed <code>favorite_songs</code>? Try it and see!</p>
+  	<p>What do you think would be the result if you typed the above line of code in your code editor and then printed <code>favorite_songs</code>? Try it and see!</p>
 	{% endcall %}
 	{% call step('Step 3', trinket='2877d865f6') %}
 	<p>Now that you know about variables and values, let’s create some for our simile generator. A simile is a comparison of two nouns. To make our simile generator, we need to have two lists of nouns that we can compare.</p>
@@ -60,7 +61,7 @@
 		The miners spilling out of warehouses with their lunch pails toward the mouth of the elevator like insects toward a lighted trap.<br>
 		Her breath is like frozen air.
 		</p>
-	<p>We need to split each of these similes so that the first noun phrase of each simile is in the first list, and the second noun phrase of each simile is in the second list. A <strong>noun phrase</strong> contains a noun (person, place, thing) and words that accompany it, such as articles (a/an/the), adjectives, or verbs.</p>
+	<p>We need to split each of these similes so that the first noun phrase of each simile is in the first list, and the second noun phrase of each simile is in the second list. A <strong>noun phrase</strong> contains a noun (person, place, thing) and words that accompany it, such as articles (a/an/the), adjectives, verbs, and other parts of speech.</p>
 	<p>Look at the similes again:</p>
 	<p>The horse was strutting <strong>like</strong> a prizefighter.</p>
 	<p>The miners spilling out of warehouses with their lunch pails toward the mouth of the elevator <strong>like</strong> insects toward a lighted trap.</p>
@@ -69,16 +70,16 @@
 		Let’s take the noun phrases on the left of "like" and assign them as values to our first variable. Here’s a hint as to how to format these:
 		</p>
 	<p><code>list_1 = [“ ” , “ ”, “ ” ]</code></p>
-	<p>We also need to assign values to our second variable. Take the noun phrases on the right of "like" and assign them as list items to the second variable. Use the same formatting as you did for <code>list_1.</code></p>
+	<p>We also need to assign values to our second list variable. Take the noun phrases on the right of "like" and assign them as list items to the second list variable. Use the same formatting as you did for <code>list_1</code> to create your second list.</p>
 	{% endcall %}
 
 	{% call step('Step 4', trinket='2877d865f6') %}
-	<p>Now that we have our two lists, with each list containing a part of a simile, we need to tell our program to randomly pull an item from each list. We do this by using Python’s <code>random</code> module.</p>
+	<p>Now that we have our two lists, with each list containing simile components, we need to tell our program to randomly pull an item from each list. We do this by using Python’s <code>random</code> module.</p>
 	<p>On lines 7 and 8, we are going to make two new variables. Each variable is going to contain just one item, or value. Type the following code on lines 7 and 8:</p>
 	<p><code>part_1 = random.choice(list_1)</code><br>
 	   <code>part_2 = random.choice(list_2)</code>
 	</p>
-	<p>The random.choice you see above is randomly pulling an item from the list in parentheses next to it and assigning that value to the new variable. So, the variable <code>part_1</code> will have a value of an item from <code>list_1</code> and the variable <code>part_2</code> will have a value of something pulled from <code>list_2</code>. </p>
+	<p>The <code>random.choice</code> you see above is randomly pulling an item from the list in parentheses next to it and assigning that value to the new variable. So, the variable <code>part_1</code> will have a value of an item from <code>list_1</code> and the variable <code>part_2</code> will have a value of an item pulled from <code>list_2</code>. </p>
 	<p>This is where the “scrambling” happens--we won’t know what items the code assigned to <code>part_1</code> and <code>part_2</code> until the program runs!</p>
 	{% endcall %}
 
@@ -86,11 +87,11 @@
 	<p>A basic simile follows this formula:</p>
 	<p>simile = noun phrase 1 + “like” + noun phrase 2</p>
 	<p>We want to teach this formula to our program. How might we do that, using what we know about variables and values? On line 10 try turning this formula into code. </p>
-	<p>Then, on line 11, tell the program to print your simile. Then hit <strong>Run</strong> and see what happens!</p>
+	<p>Then, on line 12, tell the program to print your simile. Then run your program and see what happens!</p>
 	{% endcall %}
 
 	{% call step('Step 6', trinket='2877d865f6') %}
-	<p>Now your simile generator is all set up and ready to use. All you have to do is hit <strong>Run</strong> as many times as you want to see different similes. You may even end up seeing the original, unscrambled similes! It all depends on what values the program chooses to randomly pull from <code>list_1</code> and <code>list_2</code>. </p>
+	<p>Now your simile generator is all set up and ready to use. All you have to do is run your program as many times as you want to see different similes. You may even end up seeing the original, unscrambled similes! It all depends on what values the program chooses to randomly pull from <code>list_1</code> and <code>list_2</code>. </p>
 	{% endcall %}
 {% endblock %}
 
@@ -100,7 +101,7 @@
 
 {% block editor %}
 	{{ trinket('2877d865f6', active=true) }}
-	{{ trinket('6b83e71dc1') }}
+	{{ trinket('7b478b56fd') }}
 {% endblock %}
 
 {% block resources %}
