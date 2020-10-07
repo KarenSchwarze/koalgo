@@ -22,88 +22,88 @@
 {% endblock %}
 
 {% block steps %}
-  {% call step('Step 1', active=true, trinket='5164481df5') %}
+  {% call step('Step 1', active=true, trinket='a141a3acde') %}
   <h4>Variables and Values</h4>
-  <p>In Python, we have variables and values. Think of a variable as a box, and a value as something that goes inside the box. Here is an example of a variable and its value:</p>
-  <p>animal = “cat”</p>
-  <p>In this case, animal is the variable, and “cat” is its value. In fact, it is a specific type of value--a string. A value that has letters or characters and no numbers is a string type value. We put strings inside quotation marks. When we write a variable, we are declaring the variable. </p>
-  <p>In this case, we can say that we are assigning the value of “cat” to the variable animal. The = is called the assignment operator. It’s not an “equals” sign in the sense that 2 = 2, but it does convey a relationship. We are basically saying that animal represents “cat”. That means that when we do something with animal, we are doing something with “cat”. </p>
-  <p>For example, look at this code:<br>
-    print(animal)<br>
+  	<p>In Python, we have variables and values. Think of a <strong>variable</strong> as a box, and a <strong>value</strong> as something that goes inside the box. Here is an example of a variable and its value:</p>
+  	<p><code>animal = “cat”</code></p>
+  	<p>In this case, <code>animal</code> is the variable, and <code>“cat”</code> is its value. In fact, it is a specific type of value--a <strong>string</strong>. A value that has letters or characters and no numbers is a string type value. We put strings inside quotation marks. When we write a variable, we are <strong>declaring</strong> the variable. </p>
+  	<p>In this case, we can say that we are <strong>assigning</strong> the value of <code>“cat”</code> to the variable <strong>animal</strong>. The <code>=</code> is called the <strong>assignment operator</strong>. It’s not an “equals” sign in the sense that 2 = 2, but it does convey a relationship. We are basically saying that <code>animal</code> represents <code>“cat”</code>. That means that when we do something with <code>animal</code>, we are doing something with <code>“cat”</code>. </p>
+  	<p>For example, look at this code:<br>
+    <code>print(animal)</code><br>
     </p>
-  <p>The print function tells the program to print, or display, something in the output area of our code editor. A function is an action that we can do in Python. Keeping in mind that animal represents “cat”, what do you think we’ll see if we print the value of animal?</p>
-  <p>Try it yourself: In the code editor on the right, declare a variable called animal. Then assign it a value, like “cat” (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the Run button at the top of the editor to see the results!</p>
-  <p>You can also have multiple words as part of a single value. For example:</p>
-  <p>favorite_song = “Somewhere Over the Rainbow”</p>
-  <p>Try typing the above code in the editor and then printing favorite_song.</p>
-  <p>Note that variable names are lowercase. Use underscores when you need to include multiple words, as in favorite_song, cat_name, and so on.</p>
-  <p>Sometimes we might want to have more than one value assigned to a variable. We might want to have a list of values, for instance. In Python, we can make a list, also called an array. For example:</p>
-  <p>animal = [“cat”, “dog”, “bird”, “fish”]</p>
-  <p>“Cat”, “dog”, “bird”, and “fish” are all values in the array. In this example, they are all single-word strings. But you can have multiple-word strings as values in an array, as well:</p>
-  <p>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</p>
-  <p>What do you think will be the result if you typed the above line of code in your code editor and then printed favorite_songs? Try it and see!</p>
+ 	  <p>The <code>print</code> function tells the program to print, or display, something in the output area of our code editor. A <strong>function</strong> is an action that we can do in Python. Keeping in mind that <code>animal</code> represents <code>“cat”</code>, what do you think we’ll see if we print the value of <code>animal?</code></p>
+  	<p>Try it yourself: In the code editor on the right, declare a variable called <code>animal</code>. Then assign it a value, like <code>“cat”</code> (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the large gray triangle button at the top of the editor to run your program and see the results!</p>
+  	<p>You can also have multiple words as part of a single value. For example:</p>
+  	<p><code>favorite_song = “Somewhere Over the Rainbow”</code></p>
+  	<p>Try typing the above code in the editor and then printing <code>favorite_song</code>.</p>
+  	<p>Note that variable names are lowercase. Use underscores when you need to include multiple words, as in <code>favorite_song</code>, <code>cat_name</code>, and so on.</p>
+  	<p>Sometimes we might want to have more than one value assigned to a variable. We might want to have a list of values, for instance. In Python, we can make a list, also called an <strong>array</strong>. For example:</p>
+  	<p><code>animal = [“cat”, “dog”, “bird”, “fish”]</code></p>
+  	<p><code>“Cat”</code>, <code>“dog”</code>, <code>“bird”</code>, and <code>“fish”</code> are all values in the array. In this example, they are all single-word strings. But you can have multiple-word strings as values in an array, as well:</p>
+  	<p><code>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</code></p>
+  	<p>What do you think would be the result if you typed the above line of code in your code editor and then printed <code>favorite_songs</code>? Try it and see!</p>
   {% endcall %}
 
-  {% call step('Step 2', trinket='d5b78ffc68') %}
+  {% call step('Step 2', trinket='bbc3a58894') %}
   <p>Now that we know about variables and values, we need to translate our oxymorons into code. </p>
   <p>In the oxymorons from Romeo and Juliet, the first word is an adjective. For example, “loving” in “loving hate” is an adjective. The second word in these oxymorons is a noun. For example, “hate” in “loving hate” is a noun. We are going to create two variables. The first variable is going to be our list of adjectives (the first word in the oxymorons) and the second variable will be our list of nouns (the second word in the oxymorons).</p>
   <p>On lines 2-3, type:<br>
-    adjectives = [“brawling”, “loving”, “heavy”, “sweet”]<br>
-    nouns = [“love”, “hate”, “lightness”, “sorrow”]
+    <code>adjectives = [“brawling”, “loving”, “heavy”, “sweet”]</code><br>
+    <code>nouns = [“love”, “hate”, “lightness”, “sorrow”]</code>
     </p>
   {% endcall %}
 
-  {% call step('Step 3', trinket='5164481df5') %}
+  {% call step('Step 3', trinket='a141a3acde') %}
   <h4>Indexing</h4>
   <p>Now we’re going to learn about indexing in Python. Indexing means that every value in a list has a number automatically assigned to it. For the first value in a list, that number is always 0. The second item in the list is 1, the third item in the list is 2, and so on.</p>
   <p>The cool thing about indexing is that, because a number is assigned to a value, when you do things with those numbers you are doing things with the values. </p>
   <p>If we were to present our lists of adjectives and nouns using their index numbers, our lists would look like this:</p>
-  <p>adjectives = [0,1,2,3]<br>
-    nouns = [0,1,2,3]
+  <p><code>adjectives = [0,1,2,3]</code><br>
+    <code>nouns = [0,1,2,3]</code>
     </p>
   <p>The first word in our list of adjectives--that is, the first value in that list--is “brawling”. Its index number is 0. The first word or value in our list of nouns is “love”. Its index number is also 0. “Brawling” and “love” are at index number 0 in their respective lists.</p>
   <p>To “call” an item that corresponds to a given index number in a list, all we need to do is type the name of the list--the variable name--and put the index number next to it in brackets. So, if we want to “call” the word “brawling”, and its index number is 0 in a list named “adjectives”, our code would look like this:</p>
-  <p>adjectives[0]</p>
+  <p><code>adjectives[0]</code></p>
   <p>If this is all we want to display as our output, we can invoke, or use, the print function. We can put whatever we want to display in parentheses, like this:</p>
-  <p>print(adjectives[0])</p>
-  <p>We can even assign adjectives[0] to its own variable, like this:<br>
-    word = adjectives[0]
+  <p><code>print(adjectives[0])</code></p>
+  <p>We can even assign <code>adjectives[0]</code> to its own variable, like this:<br>
+    <code>word = adjectives[0]</code>
     </p>
-  <p>If you do this, then you can just print the name of the variable, word, to get the same results as if you had printed adjectives[0]. In the code editor on the right, go to the Indexing section and uncomment, or remove the hashtags from, the code on lines 19-21. </p>
+  <p>If you do this, then you can just print the name of the variable, word, to get the same results as if you had printed <code>adjectives[0]</code>. In the code editor on the right, go to the Indexing section and uncomment, or remove the hashtags from, the code on lines 19-21. </p>
   <p>Run the program to see the results!</p>
   {% endcall %}
 
-  {% call step('Step 4', trinket='d5b78ffc68') %}
+  {% call step('Step 4', trinket='bbc3a58894') %}
   <p>Now that you’ve learned about indexing in Python, you’re ready to write some more code for our oxymoron machine. Let’s teach our program our oxymoron formula:</p>
   <p>oxymoron = adjective + noun</p>
-  <p>Now we need to type the name of our new variable, oxymoron. If we want our oxymoron to be “equal to” the first word in our list of adjectives plus the first word in our list of nouns, what might we need to write as the value of that variable? In other words, what do we need to put on the right side of the equals sign? Write your code on line 5 in your code editor.</p>
-  <p>There’s one more thing we need to add. We want to have a space between adjectives[0] and nouns[0]. Otherwise the program will put the words “brawling” and “love” right next to each other, without any space between the words. Add a space by formatting your code this way:</p>
-  <p>oxymoron = adjectives[0] + “ ” + nouns[0]</p>
+  <p>Now we need to type the name of our new variable, <code>oxymoron</code>. If we want our oxymoron to be “equal to” the first word in our list of adjectives plus the first word in our list of nouns, what might we need to write as the value of that variable? In other words, what do we need to put on the right side of the equals sign? Write your code on line 5 in your code editor.</p>
+  <p>There’s one more thing we need to add. We want to have a space between <code>adjectives[0]</code> and <code>nouns[0]</code>. Otherwise the program will put the words “brawling” and “love” right next to each other, without any space between the words. Add a space by formatting your code this way:</p>
+  <p><code>oxymoron = adjectives[0] + “ ” + nouns[0]</code></p>
   <p>When we “add together” parts of code using the + symbol, we are concatenating the parts of code.</p>
   {% endcall %}
 
-  {% call step('Step 5', trinket='d5b78ffc68') %}
-  <p>Now we want to print, or display, our oxymoron. Use the print function to do this and hit Run. </p>
+  {% call step('Step 5', trinket='bbc3a58894') %}
+  <p>Now we want to print, or display, our oxymoron. Use the print function to do this and run the program. </p>
   {% endcall %}
 
-  {% call step('Step 6', trinket='d5b78ffc68') %}
+  {% call step('Step 6', trinket='bbc3a58894') %}
   <p>Now that you know how to display the first oxymoron in our list--”brawling love”--it’s time to do the same for the other oxymorons. </p>
-  <p>Instead of having just one oxymoron variable, we’re going to have four. That means we need to change our variable name on line 7 just slightly. Let’s change it to oxymoron_1, as it’s going to be the first of four oxymorons. </p>
+  <p>Instead of having just one oxymoron variable, we’re going to have four. That means we need to change our variable name on line 7 just slightly. Let’s change it to <code>oxymoron_1</code>, as it’s going to be the first of four oxymorons. </p>
   <p>Move on to line 9. Now we need to write the code for our second oxymoron. Any guess as to what the code will be?</p>
-  <p>If you guessed oxymoron_2 = adjectives[1] + “  ” + nouns[1], you’re right! Now write the code for oxymoron_3 and oxymoron_4. You should have a line of code for each oxymoron.</p>
+  <p>If you guessed <code>oxymoron_2 = adjectives[1] + “  ” + nouns[1]</code>, you’re right! Now write the code for <code>oxymoron_3</code> and <code>oxymoron_4</code>. You should have a line of code for each oxymoron.</p>
   {% endcall %}
 
-  {% call step('Step 7', trinket='d5b78ffc68') %}
+  {% call step('Step 7', trinket='bbc3a58894') %}
   <p>Can you guess what we need to do next? We need to “print” all of our oxymorons. Right now we can only see the first one if we run our program.</p>
   <p>We have a couple of options for doing this. If you want your oxymorons to all display in a horizontal list, with a comma and a space after each oxymoron, you can write your code this way: </p>
-  <p>print(oxymoron_1 + “, ” + oxymoron_2 + “, ” + oxymoron_3 + “, ” + oxymoron_4)</p>
+  <p><code>print(oxymoron_1 + “, ” + oxymoron_2 + “, ” + oxymoron_3 + “, ” + oxymoron_4)</code></p>
   <p>If you want your oxymorons to stack on top of each other in a vertical list, you can write your code this way:</p>
-  <p>print(oxymoron_1)<br>
-    print(oxymoron_2)<br>
-    print(oxymoron_3)<br>
-    print(oxymoron_4)
+  <p><code>print(oxymoron_1)</code><br>
+    <code>print(oxymoron_2)</code><br>
+    <code>print(oxymoron_3)</code><br>
+    <code>print(oxymoron_4)</code>
     </p>
-  <p>Either way you choose to format the code, when you click Run, you should get a list of all 4 oxymorons.</p>
+  <p>Either way you choose to format the code, when you run your program, you should get a list of all 4 oxymorons.</p>
   {% endcall %}
 {% endblock %}
 
@@ -112,8 +112,8 @@
 {% endblock %}
 
 {% block editor %}
-  {{ trinket('d5b78ffc68', active=true) }}
-  {{ trinket('5164481df5') }}
+  {{ trinket('a141a3acde', active=true) }}
+  {{ trinket('bbc3a58894') }}
 {% endblock %}
 
 {% block resources %}
