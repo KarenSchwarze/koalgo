@@ -27,8 +27,9 @@
 	<p>The code editor on the right is where you’ll write your code for this project.</p>
 	<p>To make our program, we will first need to split up our similes. Then we will tell the program to randomly combine together two halves of a simile to make a whole simile.</p>
 	<p>Because we want the program to have the ability to randomly assign one half of a simile to another half, we need to tell our program to use Python’s <code>random</code> module. This module, or set of built-in Python files, allows the program to do things randomly.</p>
-	<p>To tell our program to use Python’s <code>random</code> module, we need to import it. Try doing this yourself: On line 2 of the code editor on the right, write a direct command to tell your program to <em>import</em> the <code>random</code> module. </p>
-	<p>Next up we’ll learn about variables and values. </p>
+	<p>To tell our program to use Python’s <code>random</code> module, we need to import it. Try doing this yourself: On line 2 of the code editor on the right, write a direct command to tell your program to <em>import</em> the <code>random</code> module with this code: </p>
+	<p><code>import random</code></p>
+	<p>Next up, we’ll learn about variables and values. </p>
 	{% endcall %}
 
 	{% call step('Step 2', trinket='7b478b56fd') %}
@@ -40,7 +41,7 @@
   	<p>For example, look at this code:<br>
     <code>print(animal)</code><br>
     </p>
- 	<p>The <code>print</code> function tells the program to print, or display, something in the output area of our code editor. A <strong>function</strong> is an action that we can do in Python. Keeping in mind that <code>animal</code> represents <code>“cat”</code>, what do you think we’ll see if we print the value of <code>animal?</code></p>
+ 	<p>The <code>print</code> function tells the program to print, or display, something in the output area of our code editor. (A <strong>function</strong> is an action that we can do in Python.) Keeping in mind that <code>animal</code> represents <code>“cat”</code>, what do you think we’ll see if we print the value of <code>animal?</code></p>
   	<p>Try it yourself: In the code editor on the right, declare a variable called <code>animal</code>. Then assign it a value, like <code>“cat”</code> (or another animal, if you’re not a cat person). Then tell the program to print the variable. Click the large gray triangle button at the top of the editor to run your program and see the results!</p>
   	<p>You can also have multiple words as part of a single value. For example:</p>
   	<p><code>favorite_song = “Somewhere Over the Rainbow”</code></p>
@@ -52,19 +53,20 @@
   	<p><code>favorite_songs = [“Somewhere Over the Rainbow”, “Happy Birthday”, “Imagine”]</code></p>
   	<p>What do you think would be the result if you typed the above line of code in your code editor and then printed <code>favorite_songs</code>? Try it and see!</p>
 	{% endcall %}
+
 	{% call step('Step 3', trinket='2877d865f6') %}
 	<p>Now that you know about variables and values, let’s create some for our simile generator. A simile is a comparison of two nouns. To make our simile generator, we need to have two lists of nouns that we can compare.</p>
 	<p>First, let’s create two new variables. Each one is the name of a list. If we want to have two lists, list 1 and list 2, how would we format those as variable names? Type the variable names on lines 4 and 5 of your code editor. </p>
 	<p>Now we need some values to assign to our variables. Let’s take a look at our similes:</p>
 	<p>
 		The horse was strutting like a prizefighter.<br>
-		The miners spilling out of warehouses with their lunch pails toward the mouth of the elevator like insects toward a lighted trap.<br>
+		The miners spilled out of warehouses with their lunch pails toward the mouth of the elevator like insects toward a lighted trap.<br>
 		Her breath is like frozen air.
 		</p>
 	<p>We need to split each of these similes so that the first noun phrase of each simile is in the first list, and the second noun phrase of each simile is in the second list. A <strong>noun phrase</strong> contains a noun (person, place, thing) and words that accompany it, such as articles (a/an/the), adjectives, verbs, and other parts of speech.</p>
 	<p>Look at the similes again:</p>
 	<p>The horse was strutting <strong>like</strong> a prizefighter.</p>
-	<p>The miners spilling out of warehouses with their lunch pails toward the mouth of the elevator <strong>like</strong> insects toward a lighted trap.</p>
+	<p>The miners spilled out of warehouses with their lunch pails toward the mouth of the elevator <strong>like</strong> insects toward a lighted trap.</p>
 	<p>Her breath is <strong>like</strong> frozen air.</p>
 	<p>
 		Let’s take the noun phrases on the left of "like" and assign them as values to our first variable. Here’s a hint as to how to format these:
