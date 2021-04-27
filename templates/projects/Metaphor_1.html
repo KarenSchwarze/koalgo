@@ -64,23 +64,27 @@
 
     {% call step('Step 3', trinket='44e5e43d9f') %}
       <p>Now that we know how our metaphors fit the metaphor formula, we need to turn each part into code. </p>
-      <p>First, we’ll split our noun phrases into variables and values. For each metaphor, we need to have two variables--noun phrase 1 and noun phrase 2. Because we have 3 metaphors, we’re going to make, or <strong>declare</strong>, a total of 6 variables with 6 accompanying values: <code>noun_phrase_1a</code> (“All the world”) and <code>noun_phrase_1b</code> (“stage”); <code>noun_phrase_2a</code> (“Juliet”) and <code>noun_phrase_2b</code> (“the sun”), and <code>noun_phrase_3a</code> (“Dying”) and <code>noun_phrase_3b</code> (“wild night”).</p>
-      <p>On lines 2-7, type this code: <br>
-        <code>noun_phrase_1a = “All the world”</code><br>
-        <code>noun_phrase_1b = “a stage”</code><br>
-        <code>noun_phrase_2a = “Juliet”</code><br>
-        <code>noun_phrase_2b = “the sun”</code><br>
-        <code>noun_phrase_3a = “Dying”</code><br>
-        <code>noun_phrase_3b = “a wild night”</code><br>
-        </p>
+      <p>First, we’ll split our noun phrases into variables and values. For each metaphor, we need to have two variables--noun phrase 1 and noun phrase 2. Because we have 3 metaphors, we’re going to make, or <strong>declare</strong>, a total of 6 variables with 6 accompanying values: 
+      <p><code>noun_phrase_1a</code> (“All the world”) and <code>noun_phrase_1b</code> (“a stage”);</p>
+      <p><code>noun_phrase_2a</code> (“Juliet”) and <code>noun_phrase_2b</code> (“the sun”);</p>
+      <p>and <code>noun_phrase_3a</code> (“Dying”) and <code>noun_phrase_3b</code> (“a wild night”).</p>
+
+      <p>On lines 2-7, type this code:</p>
+      
+      <p><code>noun_phrase_1a = “All the world”</code></p>
+      <p><code>noun_phrase_1b = “a stage”</code></p>
+      <p><code>noun_phrase_2a = “Juliet”</code></p>
+      <p><code>noun_phrase_2b = “the sun”</code></p>
+      <p><code>noun_phrase_3a = “Dying”</code></p>
+      <p><code>noun_phrase_3b = “a wild night”</code></p>
+      
     {% endcall %}
 
     {% call step('Step 4', trinket='44e5e43d9f') %}
       <p>Let’s create three more variables. On lines 9-11, write this code:</p>
-      <p><code>metaphor_1 = noun_phrase_1a + “  is  ” + noun_phrase_1b</code><br>
-        <code>metaphor_2 = noun__phrase_2a + “  is  ” + noun_phrase_2b</code><br>
-        <code>metaphor_3 = noun_phrase_3a + “  is  ” + noun_phrase_3b</code><br>
-        </p>
+      <p><code>metaphor_1 = noun_phrase_1a + “  is  ” + noun_phrase_1b</code></p>
+      <p><code>metaphor_2 = noun__phrase_2a + “  is  ” + noun_phrase_2b</code></p>
+      <p><code>metaphor_3 = noun_phrase_3a + “  is  ” + noun_phrase_3b</code></p>
       <p>In the code above, we are joining together both noun phrases in each metaphor with “is”. We have a space on either side of “is” within the quotation marks so that we have enough space in each metaphor. We used the “+” to add together, or <strong>concatenate</strong>, the parts of our metaphors. </p>
     {% endcall %}
     
